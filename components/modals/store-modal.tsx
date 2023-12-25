@@ -65,7 +65,8 @@ export const StoreModal = () => {
                             <div className={"pt-6 space-x-2 flex items-center justify-end w-full"}>
                                 <Button variant={"outline"} disabled={loading}
                                         onClick={storeModal.onClose}>Cancel</Button>
-                                <Button type={"submit"}>Continue</Button>
+                                <Button type={"submit"}
+                                        disabled={loading}>{loading ? 'Creating ....' : 'Continue'}</Button>
                             </div>
                         </form>
                     </Form>
